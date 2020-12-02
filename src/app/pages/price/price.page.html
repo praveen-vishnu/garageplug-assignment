@@ -1,0 +1,71 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title> <img src="assets/img/gp.png" alt="" srcset="" /></ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <ion-grid>
+    <ion-row>
+      <ion-col class="ion-text-center">
+        <h5>CONTACT DETAILS</h5>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <p class="ion-padding-start">Selected Services</p>
+    </ion-row>
+    <ion-row>
+      <ion-col
+        size="4"
+        class="ion-text-center"
+        *ngFor="let service of services; let i = index"
+      >
+        <ion-card class="notSelected">
+          <ion-card-content>
+            <img src="{{service.icon}}" alt="" srcset="" />
+          </ion-card-content>
+        </ion-card>
+        <ion-text>{{service.name}}</ion-text>
+      </ion-col>
+      <ion-col class="change-btn" size="4">
+        <ion-button fill="outline" size="small" (click)="changeService()"
+          >Change</ion-button
+        ></ion-col
+      >
+    </ion-row>
+    <ion-row>
+      <p class="ion-padding-start">Car size</p>
+    </ion-row>
+    <ion-row>
+      <ion-col
+        size="4"
+        class="ion-text-center"
+        *ngFor="let car of cars; let i = index"
+      >
+        <ion-card class="notSelected">
+          <ion-card-content>
+            <img src="{{car.icon}}" alt="" srcset="" />
+          </ion-card-content>
+        </ion-card>
+        <ion-text>{{car.name}}</ion-text>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+<hr>  
+    <div class="price-total">
+    <ion-grid>
+      <ion-row>
+        <ion-col class="ion-text-start">
+          <h5>TOTAL PRICE</h5>
+        </ion-col>
+        <ion-col class="ion-text-end">
+          <h5>XXX AED</h5>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </div>
+  <div class="ion-text-center ion-margin-top">
+    <ion-button fill="outline" (click)="continue()">CONTINUE</ion-button>
+  </div>
+</ion-content>

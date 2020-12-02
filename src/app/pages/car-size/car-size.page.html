@@ -1,0 +1,32 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title> <img src="assets/img/gp.png" alt="" srcset="" /></ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <ion-grid>
+    <ion-row>
+      <ion-col class="ion-text-center">
+        <h5>CAR SIZE</h5>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col
+        (click)="selectCars(i)"
+        size="4"
+        class="ion-text-center"
+        *ngFor="let car of cars; let i = index"
+      >
+        <ion-card [ngClass]="car.selectStatus ? 'selected' : 'notSelected'">
+          <ion-card-content>
+            <img src="{{car.icon}}" alt="" srcset="" />
+          </ion-card-content>
+        </ion-card>
+        <ion-text>{{car.name | uppercase}}</ion-text>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  <div class="ion-text-center ion-margin-top">
+    <ion-button fill="outline" (click)="continue()">CONTINUE</ion-button>
+  </div>
+</ion-content>
