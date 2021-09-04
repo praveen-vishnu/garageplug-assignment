@@ -29,10 +29,7 @@
 .first-half {
   height: 50vh;
   background: #eeecdf !important;
-}
-.first-half img {
-  width: 65%;
-  position: absolute;
-  top: 30%;
-  right: 5%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

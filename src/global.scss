@@ -29,10 +29,10 @@ ion-header ion-toolbar {
   --background: #eeecdf !important;
 }
 ion-header ion-title {
-  text-align: right !important;
+  text-align: center !important;
 }
 ion-header img {
-  width: 50%;
+  width: auto;
 }
 .header-md::after {
   background-image: none;

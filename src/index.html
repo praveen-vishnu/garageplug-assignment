@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="utf-8"/>
-  <title>Ionic App</title>
+  <title>Garageplug App</title>
 
   <base href="/"/>
 
@@ -19,6 +19,19 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black"/>
   <link rel="manifest" href="manifest.webmanifest">
   <meta name="theme-color" content="#1976d2">
+  <style>
+    body{
+      max-width: 768px  !important;
+    margin: 0 auto !important;
+    position: relative !important;
+    background-color: #78909C !important;
+    }
+  </style>
+  <script>
+    document.getElementsByTagName('ion-title').addEventListener('click', ()=>{
+      console.log("asdf");
+    })
+  </script>
 </head>
 
 <body>
